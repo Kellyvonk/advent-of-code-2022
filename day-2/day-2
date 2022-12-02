@@ -1,0 +1,93 @@
+input = open ('input', 'r').read()
+
+
+# A = rock
+# B = paper
+# C = scissor
+# X = rock
+# Y = paper
+# Z = scissor
+# rock defeats scissor
+# scissor defeats paper
+# paper defeats rock
+# score shape selected (A/X rock = 1, B/Y paper = 2, C/Z scissor = 3)
+# score round (lost = 0, draw = 3, win = 6)
+
+
+# A X = draw = 4
+# A Y = win = 8
+# A Z = lose = 3
+# B X = lose = 1
+# B Y = draw = 5
+# B Z = win = 9
+# C X = win = 7
+# C Y = lose = 2
+# C Z = draw = 6
+# (A/X rock = 1, B/Y paper = 2, C/Z scissor = 3)
+
+
+score = 0
+
+test = ['A Y', 'B X', 'C Z']
+
+
+for round in input.split("\n"):
+    if round == 'A X':
+        score = score + 4
+    if round == 'A Y':
+        score = score + 8
+    if round == 'A Z':
+        score = score + 3
+    if round == 'B X':
+        score = score + 1
+    if round == 'B Y':
+        score = score + 5
+    if round == 'B Z':
+        score = score + 9
+    if round == 'C X':
+        score = score + 7
+    if round == 'C Y':
+        score = score + 2
+    if round == 'C Z':
+        score = score + 6
+    print (score)
+
+
+# X = lose
+# Y = draw
+# Z = win
+# (A/X rock = 1, B/Y paper = 2, C/Z scissor = 3)
+
+# A X = lose = 3
+# A Y = draw = 4
+# A Z = win = 8
+# B X = lose = 1
+# B Y = draw = 5
+# B Z = win = 9
+# C X = lose = 2
+# C Y = draw = 6
+# C Z = win = 7
+
+score2 = 0
+
+for round2 in input.split("\n"):
+    if round2 == 'A X':
+        score2 = score2 + 3
+    if round2 == 'A Y':
+        score2 = score2 + 4
+    if round2 == 'A Z':
+        score2 = score2 + 8
+    if round2 == 'B X':
+        score2 = score2 + 1
+    if round2 == 'B Y':
+        score2 = score2 + 5
+    if round2 == 'B Z':
+        score2 = score2 + 9
+    if round2 == 'C X':
+        score2 = score2 + 2
+    if round2 == 'C Y':
+        score2 = score2 + 6
+    if round2 == 'C Z':
+        score2 = score2 + 7
+    print (score2)
+
