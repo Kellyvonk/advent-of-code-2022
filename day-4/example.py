@@ -15,7 +15,7 @@ def how_many_are_greater_than_five(l: list):
         if item > 5:
             i += 1
     return i
-    
+
 def all_gt_five(l: list):
     for item in l:
         if item < 5:
@@ -30,3 +30,12 @@ for item in l2:
 
 print("are all elements in l1 greater than 5?", all_gt_five(l1))
 print(f"are all elements in l2 greater than 5? {foo}")
+
+
+########################
+
+my_list = [1,2,3,4]
+
+[a,b,c,d] = my_list
+
+print(a, b)

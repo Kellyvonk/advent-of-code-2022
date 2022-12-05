@@ -32,11 +32,9 @@ for elves in input.split("\n"):
 
     elf2 = list(range(int(nums_elf2a), int(nums_elf2b)+1))
 
-    if fully_contain(elf1, elf2) or fully_contain(elf2, elf1):
-        fully_contain_list.append(True)    
-
-    if partial_contain(elf1, elf2) or partial_contain(elf2, elf1):
-        partial_contain_list.append(True)
+    
+    fully_contain_list.append(fully_contain(elf1, elf2) or fully_contain(elf2, elf1))  
+    partial_contain_list.append(partial_contain(elf1, elf2))
 
 print (fully_contain_list)
 
